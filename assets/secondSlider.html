@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Cards Slider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #0B3D91; /* Dark Blue Background */
+    color: #fff;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 200vw;
+    max-width: 1000px;
+    margin-left: 150px;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: 750px;
+    
+    margin-top: 40px;
+}
+
+.cards-container {
+    display: flex;
+    overflow: hidden;
+    width: 52%;
+}
+
+.cards-container1 {
+    display: flex;
+    overflow: hidden;
+    width: 52%;
+}
+
+.card {
+    min-width: 500px;
+    /* background-color: #1c1e24; */
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 10px;
+    flex-shrink: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    display: flex;
+    width: 400px;
+}
+
+.image img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+}
+
+
+
+.content {
+    padding: 20px;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 80px;
+}
+
+.content1 {
+    padding: 20px;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.arrow {
+    background-color: #f39c12;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    /* background: #333;
+    border: 2px solid #f39c12;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg); 
+    transition: all 0.3s ease; */
+}
+
+/* .arrow:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #f39c12;
+    border-radius: 2px;
+    transition: transform 0.3s;
+}
+
+.arrow.left:before {
+    transform: rotate(45deg) translate(8px, 8px); 
+}
+
+.arrow.right:before {
+    transform: rotate(-45deg) translate(-8px, -8px); 
+} */
+
+.arrow:hover {
+    background-color: #e67e22;
+   
+}
+
+/* .arrow.left {
+    position: absolute;
+    left: 10px;
+}
+
+.arrow.right {
+    position: absolute;
+    right: 10px;
+} */
+
+#prevBtn {
+    margin-right: 50px;
+}
+
+#nextBtn {
+    margin-left: 50px;
+}
+
+#prevBtn1 {
+    margin-right: 50px;
+}
+
+#nextBtn1 {
+    margin-left: 50px;
+}
+
+  /* Media Queries for Responsiveness */
+  /* @media (min-width: 768px) {
+            .container, .container1 {
+                max-width: 80vw;
+            }
+            .card {
+                min-width: 400px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container, .container1 {
+                max-width: 70vw;
+            }
+            .card {
+                min-width: 500px;
+            }
+        } */
+
+    </style>
+    <div class="container">
+        <button class="arrow" id="prevBtn">←</button>
+        <!-- <div class="arrow left" id="prevBtn">←</div> -->
+        <div class="cards-container">
+            <div class="card">
+                <div class="image">
+                    <img src="c:\Users\HP\Downloads\WhatsApp Image 2024-10-22 at 7.59.18 PM.jpeg" alt="Card Image 1">
+                </div>
+                <div class="content">
+                    <h2>Card 1 Title</h2>
+                    <p>This is the content for card 1. Click the arrow to view the next card.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="c:\Users\HP\Downloads\WhatsApp Image 2024-10-15 at 1.12.07 PM.jpeg" alt="Card Image 2">
+                </div>
+                <div class="content">
+                    <h2>Card 2 Title</h2>
+                    <p>This is the content for card 2. It has different information and image.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="c:\Users\HP\Downloads\WhatsApp Image 2024-10-11 at 11.59.35 AM.jpeg" alt="Card Image 3">
+                </div>
+                <div class="content">
+                    <h2>Card 3 Title</h2>
+                    <p>This is the content for card 3. You can add as many cards as you like.</p>
+                </div>
+            </div>
+        </div>
+        <button class="arrow" id="nextBtn">→</button>
+        <!-- <div class="arrow right" id="nextBtn">→</div> Right Arrow -->
+    </div>
+
+    <div class="container1">
+        <button class="arrow" id="prevBtn1">←</button>
+        <!-- <div class="arrow left" id="prevBtn">←</div> -->
+        <div class="cards-container1">
+            <div class="card">
+                <div class="content1">
+                    <h2>Card 1 Title</h2>
+                    <p>This is the content for card 1. Click the arrow to view the next card.</p>
+                </div>
+                <div class="image">
+                    <img src="c:\Users\HP\Downloads\WhatsApp Image 2024-10-22 at 7.59.18 PM.jpeg" alt="Card Image 1">
+                </div>
+                
+            </div>
+            <div class="card">
+                
+                <div class="content1">
+                    <h2>Card 2 Title</h2>
+                    <p>This is the content for card 2. It has different information and image.</p>
+                </div>
+                <div class="image">
+                    <img src="c:\Users\HP\Downloads\WhatsApp Image 2024-10-15 at 1.12.07 PM.jpeg" alt="Card Image 2">
+                </div>
+            </div>
+            <div class="card">
+               
+                <div class="content1">
+                    <h2>Card 3 Title</h2>
+                    <p>This is the content for card 3. You can add as many cards as you like.</p>
+                </div>
+                <div class="image">
+                    <img src="c:\Users\HP\Downloads\WhatsApp Image 2024-10-11 at 11.59.35 AM.jpeg" alt="Card Image 3">
+                </div>
+            </div>
+        </div>
+        <button class="arrow" id="nextBtn1">→</button>
+        <!-- <div class="arrow right" id="nextBtn">→</div> Right Arrow -->
+    </div>
+
+    <script>
+        const container = document.querySelector('.cards-container');
+        const container1 = document.querySelector('.cards-container1');
+let scrollAmount = 0;
+
+document.getElementById('nextBtn').addEventListener('click', function() {
+    container.scrollBy({ left: 520, behavior: 'smooth' });
+});
+
+document.getElementById('nextBtn1').addEventListener('click', function() {
+    container1.scrollBy({ left: 520, behavior: 'smooth' });
+});
+
+document.getElementById('prevBtn').addEventListener('click', function() {
+    container.scrollBy({ left: -520, behavior: 'smooth' });
+});
+
+document.getElementById('prevBtn1').addEventListener('click', function() {
+    container1.scrollBy({ left: -520, behavior: 'smooth' });
+});
+
+    </script>
+</body>
+</html>
