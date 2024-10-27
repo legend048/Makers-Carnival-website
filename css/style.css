@@ -1,3 +1,318 @@
 /* Put all your css in this or create a sapreate file for it.
   make sure to use names that would not collide with others.
 */
+
+
+/* events start */
+
+.sec1 {
+  /* height:150vh; */
+  height: auto;
+  padding: 0px 10px;
+  width: 100%;
+  color: whitesmoke;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+.top-div {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 10vh;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-family: "Pixelify Sans", sans-serif;
+
+}
+
+.top-div img {
+  height: 100%;
+  mix-blend-mode: color-dodge;
+}
+
+.main-detail {
+  height: 100%;
+  padding-bottom: 20px;
+  
+
+}
+
+.box {
+  height: 320px;
+  width: 100%;
+  background-color: #006BFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sec1 .row>* {
+  padding: 2px;
+}
+
+.none {
+  display: none;
+}
+
+.top-b {
+  height: 25%;
+  width: 100%;
+}
+
+.bottom-b {
+  height: 45%;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.bottom-b p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.time p{
+  line-height: 1.2;
+}
+.p1 {
+  line-height: 1.2;
+}
+
+.p2 {
+  margin-top: 10px !important;
+}
+
+.p3 {
+  margin-top: 10px !important;
+}
+
+.div-btn {
+  width: 50%;
+  height: 60%;
+  background-color: whitesmoke;
+  color: #006BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pixelify Sans";
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+
+
+}
+
+.time {
+  width: max-content;
+  height: 60%;
+
+}
+
+.top-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+
+}
+
+
+/* event end */
+
+
+/* into start */
+
+
+   /* sec2 */
+
+
+   .sec2 {
+    height: 70vh;
+    padding-top: 50px;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+
+}
+
+.main-sec2 {
+    height: 100%;
+    display: flex;
+}
+
+.main-div1 {
+    width: 50%;
+    border: 0.5px solid white;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.main-div2 {
+    width: 100%;
+    border: 0.5px solid white;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.int {
+    border: 0.5px solid #006BFF;
+    width: max-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: "Pixelify Sans";
+    margin-top: -100px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: none;
+}
+
+.main-div1 h1 {
+    font-size: 65px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.butt {
+    padding: 10px 20px;
+    position: static;
+    z-index: 1;
+
+}
+
+.buton-div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.box-spek {
+    padding: 180px;
+    margin-top: -40px;
+    position: static;
+    z-index: 1;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.m{
+    height: 90%;
+    z-index: 99;
+    color: white;
+}
+
+
+.sec2 .img1 {
+    height: 120px;
+    position: absolute;
+    bottom: 0px;
+    left: 17.5%;
+    mix-blend-mode: color-dodge !important;
+}
+
+.sec2 .img2 {
+    height: 250px;
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    mix-blend-mode: exclusion !important;
+}
+
+.sec2 .img3 {
+    height: 200px;
+    position: absolute;
+    bottom: 0px;
+    left: 8%;
+    mix-blend-mode: exclusion !important;
+    transform: rotate(180deg);
+    z-index: 1;
+}
+
+.sec2 .img4 {
+    height: 130px;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    mix-blend-mode: exclusion !important;
+}
+
+.box-spek:nth-child(1) {
+    background-image: url(https://i.pinimg.com/564x/d2/ba/a0/d2baa01519d1f412ea56e9deaade9aea.jpg);
+    background-size: cover;
+
+
+}
+
+.box-spek:nth-child(2) {
+    background-image: url(https://i.pinimg.com/736x/34/cb/0a/34cb0a1e16ed8526e062c21e87a4ba1d.jpg);
+    background-size: cover;
+
+}
+
+.box-spek:nth-child(3) {
+    background-image: url(https://i.pinimg.com/564x/3f/2e/f8/3f2ef8ecc06c32f00c14b4171400f41a.jpg);
+    background-size: cover;
+
+}
+
+.box-spek:nth-child(4) {
+    background-image: url(https://i.pinimg.com/564x/ad/cd/3a/adcd3a85046eaf6f17349926c81b003b.jpg);
+    background-size: cover;
+
+}
+
+.buton-div .butt:nth-child(1){
+  background-color:#006BFF;
+}
+
+
+
+.buton-div .butt:nth-child(2){
+  background-color:white;
+
+}
+
+.sec3 {
+    height: 100vh;
+    background-color: black;
+}
+
+.pin-spacer{
+  background-color: rgb(0, 0, 0);
+}
+
+@media screen and (min-width:0px) and (max-width:768px) {
+    .sec2 img{
+        display: none;
+    }
+
+    .main-div1 h1{
+        font-size: 38px;
+
+    }
+
+    .main-div1 p{
+        font-size: 14px;
+ 
+    }
+
+    .main-div1{
+        width: 100%;
+        padding-right: 30px;
+    }
+
+    .box-spek{
+        padding: 100px;
+        margin-top: -20px;
+    }
+}
