@@ -1,3 +1,121 @@
 /* Put all your css in this or create a sapreate file for it.
   make sure to use names that would not collide with others.
 */
+
+
+/* events start */
+
+.sec1 {
+  /* height:150vh; */
+  height: auto;
+  padding: 0px 10px;
+  width: 100%;
+  color: whitesmoke;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+.top-div {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 10vh;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-family: "Pixelify Sans", sans-serif;
+
+}
+
+.top-div img {
+  height: 100%;
+  mix-blend-mode: color-dodge;
+}
+
+.main-detail {
+  height: 100%;
+  padding-bottom: 20px;
+  
+
+}
+
+.box {
+  height: 320px;
+  width: 100%;
+  background-color: #006BFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sec1 .row>* {
+  padding: 2px;
+}
+
+.none {
+  display: none;
+}
+
+.top-b {
+  height: 25%;
+  width: 100%;
+}
+
+.bottom-b {
+  height: 45%;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.bottom-b p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.time p{
+  line-height: 1.2;
+}
+.p1 {
+  line-height: 1.2;
+}
+
+.p2 {
+  margin-top: 10px !important;
+}
+
+.p3 {
+  margin-top: 10px !important;
+}
+
+.div-btn {
+  width: 50%;
+  height: 60%;
+  background-color: whitesmoke;
+  color: #006BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pixelify Sans";
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+
+
+}
+
+.time {
+  width: max-content;
+  height: 60%;
+
+}
+
+.top-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+
+}
+
+
+/* event end */
