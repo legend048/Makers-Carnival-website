@@ -27,3 +27,45 @@ t1.from(".box",{
 
 
 // events end
+
+
+// intro
+
+
+const t2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".sec2 ",
+        start: "top 0",
+        end: "bottom",
+        scrub: 4,
+        pin: true,
+    }
+})
+
+
+t2.to(".m", {
+    delay: 0,
+    transform: "translatex(-200%)",
+
+})
+
+function leftt() {
+    gsap.to(".m", {
+        transform: "translatex(0%)",
+        duration: 0.5,
+        ease: "power2.out"
+    });
+
+}
+
+function Rightt() {
+    gsap.to(".m", {
+        transform: "translatex(-200%)",
+        duration: 0.5,
+        ease: "power2.out"
+    });
+    console.log("right")
+
+}
+
+//  intro end
