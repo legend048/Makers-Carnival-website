@@ -10,7 +10,7 @@
 *:not(.footer) {
     text-decoration: #fff;
     color: #fff;
-    font-family: 'Teletactile', sans-serif;
+    /* font-family: 'Teletactile', sans-serif; */
 }
 
 h2 {
