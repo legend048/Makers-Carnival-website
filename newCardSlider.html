@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Slider</title>
+<style>
+  body {
+    /* display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+    background-color: #0033cc;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    /* align-items: center; */
+  }
+  .container {
+    width: 80%;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container1 {
+    width: 80%;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cards {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .cards1 {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .card {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .card1 {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .card img {
+    width: 45%;
+    border-radius: 8px;
+  }
+
+  .card1 img {
+    width: 45%;
+    border-radius: 8px;
+  }
+
+  .card-content {
+    width: 45%;
+  }
+
+  .card-content {
+    width: 45%;
+  }
+
+  .arrows {
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    display: flex;
+    transform: translateY(-50%);
+  }
+
+  #next{
+    margin-left: 41%;
+  }
+
+  #prev{
+    margin-left: 15px;
+  }
+
+  .arrow {
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .arrows1 {
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    display: flex;
+    transform: translateY(-50%);
+  }
+
+  #next1{
+    margin-left: 500px;
+  }
+  
+  #prev1{
+    margin-left: 55%;
+  }
+  
+  .arrow1 {
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  @media (max-width: 768px) {
+    .container, .container1 {
+      width: 90%;
+      height: auto;
+    }
+    .card img, .card1 img {
+      width: 60%;
+      margin-bottom: 10px;
+    }
+    .card-content, .card-content1 {
+      width: 100%;
+      text-align: center;
+    }
+    .arrows, .arrows1 {
+      top: 95%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container, .container1 {
+      width: 100%;
+    }
+    .arrow, .arrow1 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="cards">
+    <div class="card">
+      <img src="c:\Users\HP\Downloads\WhatsApp Image 2024-10-27 at 1.37.50 PM.jpeg" alt="Image 1">
+      <div class="card-content">
+        <h2>Card 1 Title</h2>
+        <p>Experience the highlights of last year's conference with exclusive photos and videos.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="c:\Users\HP\Downloads\WhatsApp Image 2024-10-27 at 1.37.35 PM.jpeg" alt="Image 2">
+      <div class="card-content">
+        <h2>Card 2 Title</h2>
+        <p>We hold an IT conference every year, bringing together developers and specialists from all over the world.</p>
+      </div>
+    </div>
+    <div class="card">
+        <img src="c:\Users\HP\Downloads\WhatsApp Image 2024-10-27 at 1.38.12 PM.jpeg" alt="Image 2">
+        <div class="card-content">
+          <h2>Card 3 Title</h2>
+          <p>We hold an IT conference every year, bringing together developers and specialists from all over the world.</p>
+        </div>
+      </div>
+    <!-- Add more cards as needed -->
+  </div>
+  <div class="arrows">
+    <span class="arrow" id="prev">&laquo;</span>
+    <span class="arrow" id="next">&raquo;</span>
+  </div>
+</div>
+
+<div class="container1">
+    <div class="cards1">
+      <div class="card1">
+        <div class="card-content">
+            <h2>Card 1 Title</h2>
+            <p>Experience the highlights of last year's conference with exclusive photos and videos.</p>
+          </div>
+        <img src="c:\Users\HP\Downloads\WhatsApp Image 2024-10-27 at 1.37.50 PM.jpeg" alt="Image 1">
+      </div>
+      <div class="card1">
+        <div class="card-content">
+            <h2>Card 2 Title</h2>
+            <p>We hold an IT conference every year, bringing together developers and specialists from all over the world.</p>
+          </div>
+        <img src="c:\Users\HP\Downloads\WhatsApp Image 2024-10-27 at 1.37.35 PM.jpeg" alt="Image 2">
+      </div>
+      <div class="card1">
+        <div class="card-content">
+            <h2>Card 3 Title</h2>
+            <p>We hold an IT conference every year, bringing together developers and specialists from all over the world.</p>
+          </div>
+          <img src="c:\Users\HP\Downloads\WhatsApp Image 2024-10-27 at 1.38.12 PM.jpeg" alt="Image 2">
+        </div>
+      <!-- Add more cards as needed -->
+    </div>
+    <div class="arrows1">
+      <span class="arrow1" id="prev1">&laquo;</span>
+      <span class="arrow1" id="next1">&raquo;</span>
+    </div>
+  </div>
+
+<script>
+  const cards = document.querySelector('.cards');
+  const cardCount = document.querySelectorAll('.card').length;
+  let currentIndex = 0;
+
+  document.getElementById('next').addEventListener('click', () => {
+    if (currentIndex < cardCount - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateCardPosition1();
+  });
+
+  document.getElementById('prev').addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = cardCount - 1;
+    }
+    updateCardPosition1();
+  });
+
+  function updateCardPosition1() {
+    const cardWidth = document.querySelector('.card').offsetWidth;
+    cards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+
+  const cards1 = document.querySelector('.cards1');
+  const cardCount1 = document.querySelectorAll('.card1').length;
+  let currentIndex1 = 0;
+
+  document.getElementById('next1').addEventListener('click', () => {
+    if (currentIndex1 < cardCount1 - 1) {
+      currentIndex1++;
+    } else {
+      currentIndex1 = 0;
+    }
+    updateCardPosition();
+  });
+
+  document.getElementById('prev1').addEventListener('click', () => {
+    if (currentIndex1 > 0) {
+      currentIndex1--;
+    } else {
+      currentIndex1 = cardCount1 - 1;
+    }
+    updateCardPosition();
+  });
+
+  function updateCardPosition() {
+    const cardWidth1 = document.querySelector('.card1').offsetWidth;
+    cards1.style.transform = `translateX(-${currentIndex1 * cardWidth1}px)`;
+  }
+</script>
+
+</body>
+</html>
