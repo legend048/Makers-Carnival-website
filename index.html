@@ -1,27 +1,680 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/landingPage.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/landingPage.css" />
     <title>Home</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- Basic Navbar without Links -->
-        <nav class="nav">
-            <div class="nav-text">
-                <h3 class="typewrite" data-period="2000" data-type='["Makers Space", "Makers Carnival"]'>
-                    <span class="wrap"></span>
-                </h3>
-            </div>
+      <!-- Basic Navbar without Links -->
+      <nav class="nav">
+        <div class="nav-text">
+          <h3
+            class="typewrite"
+            data-period="2000"
+            data-type='["Makers Space", "Makers Carnival"]'
+          >
+            <span class="wrap"></span>
+          </h3>
+        </div>
+      </nav>
 
-        <!-- Landing Section -->
-        <section id="section1" class="landing">            
-            <div class="mask"></div> 
-            <h1 data-value="HYPERPLEXED">MAKER'S CARNIVAL</h1>
-        </section>
+      <!-- Landing Section -->
+      <section id="section1" class="landing">
+        <div class="mask"></div>
+        <h1 data-value="HYPERPLEXED">MAKER'S CARNIVAL</h1>
+      </section>
     </div>
+
+    <!-- faq section start -->
+
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Raleway:300&display=swap");
+      @import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
+      @import url("https://fonts.googleapis.com/css?family=Poppins:500&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+      * {
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+      }
+
+      ::-webkit-scrollbar {
+        width: 4px;
+        color: #c70039;
+        transition: all 0.4s ease;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c70039;
+        border-radius: 4px;
+        width: 4px;
+        transition: all 0.4s ease;
+      }
+      ::-webkit-scrollbar-track {
+        background: #101010;
+        border-radius: 4px;
+        width: 4px;
+      }
+
+      /* Firefox
+  input[type=number] {
+    -moz-appearance: textfield;
+  } */
+      body {
+        /* user-select: none; */
+        height: auto;
+        overflow-x: hidden;
+        width: 100%;
+        background: #171717;
+      }
+      @media only screen and (max-width: 768px) {
+      }
+      .color {
+        color: #c70039;
+        transition: all 0.4s ease;
+      }
+      #about {
+        /* display: none; */
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+      }
+
+      #about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: whitesmoke;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+        padding: 30px;
+      }
+      .about-header {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 45px;
+        font-family: raleway;
+        color: whitesmoke;
+        padding: 10px;
+        padding-bottom: 30px;
+        padding-top: 60px;
+        font-weight: 900;
+      }
+
+      #about-content a {
+        text-decoration: none;
+        font-family: aileron;
+        font-weight: 400;
+        font-size: 35px;
+        color: #c70039;
+        transition: all 0.4s ease;
+      }
+
+      @media (max-width: 767px) {
+      }
+
+      @media (max-width: 767px) {
+      }
+
+      @media (max-width: 767px) {
+      }
+
+      @media (max-width: 767px) {
+      }
+
+      @media (max-width: 767px) {
+      }
+
+      @media (max-width: 767px) {
+      }
+
+      @media (max-width: 767px) {
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
+      }
+
+      @media (max-width: 767px) {
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
+      }
+
+      @media only screen and (max-width: 550px) {
+        #about-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: whitesmoke;
+          justify-content: center;
+          height: auto;
+          width: 100%;
+          padding: 30px;
+        }
+        .about-header {
+          color: whitesmoke;
+
+          justify-content: center;
+          font-size: 35px;
+          font-family: raleway;
+          padding: 10px;
+          font-weight: 900;
+        }
+      }
+
+      @media all and (max-width: 1025px) and (min-width: 551px) {
+        #about-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: whitesmoke;
+          justify-content: center;
+          height: auto;
+          width: 100%;
+          padding: 10px;
+        }
+        .about-header {
+          color: whitesmoke;
+          justify-content: center;
+          font-size: 45px;
+          font-family: raleway;
+          padding: 15px;
+          font-weight: 900;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+      }
+
+      details p {
+        text-align: left;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      @media screen and (max-width: 600px) {
+        summary {
+          font-size: 18px;
+        }
+      }
+      details {
+        width: 100%;
+        min-height: 5px;
+        max-width: 700px;
+        padding: 25px 25px 15px 25px;
+        margin: 0 auto;
+        position: relative;
+        font-size: 22px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        box-sizing: border-box;
+        transition: all 0.3s;
+      }
+
+      details + details {
+        margin-top: 20px;
+      }
+
+      details[open] {
+        min-height: 50px;
+        background-color: #1c1c1c;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      details p {
+        color: #96999d;
+        font-weight: 300;
+      }
+
+      summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      summary:focus {
+        outline: none;
+      }
+
+      summary:focus::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        /* box-shadow: 0 0 0 5px ; */
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .control-icon {
+        fill: #c70039;
+        transition: 0.3s ease-in;
+        pointer-events: none;
+      }
+
+      .control-icon-close {
+        display: none;
+      }
+
+      details[open] .control-icon-close {
+        display: initial;
+        transition: 0.3s ease-in;
+      }
+
+      details[open] .control-icon-expand {
+        display: none;
+      }
+    </style>
+
+    <div
+      id="about"
+      style="
+        background: url();
+        background-attachment: fixed;
+        background-size: cover;
+        margin-top: -20px;
+        padding: 0px;
+      "
+    >
+      <!--about content-->
+      <div id="about-content">
+        <div class="about-header">
+          Frequently Asked <span class="color">Questions</span>
+          <!-- <span class ="header-caption"> <span class="color"> FAQs</span></span> -->
+          <br clear="all" /><br />
+
+          <div
+            style="
+              visibility: hidden;
+              position: absolute;
+              width: 0px;
+              height: 0px;
+            "
+          >
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <symbol viewBox="0 0 24 24" id="expand-more">
+                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                <path d="M0 0h24v24H0z" fill="none" />
+              </symbol>
+              <symbol viewBox="0 0 24 24" id="close">
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                />
+                <path d="M0 0h24v24H0z" fill="none" />
+              </symbol>
+            </svg>
+          </div>
+
+          <details open>
+            <summary>
+              Is the entry free for the carnival?
+              <svg
+                class="control-icon control-icon-expand"
+                width="24"
+                height="24"
+                role="presentation"
+              >
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#expand-more"
+                />
+              </svg>
+              <svg
+                class="control-icon control-icon-close"
+                width="24"
+                height="24"
+                role="presentation"
+              >
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#close"
+                />
+              </svg>
+            </summary>
+            <p>
+              Yes, the entry to the carnival is free, get your pass
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdj6klJvdq1TvgtweKThmzQdj4W07XhVUCqEMZprHCvfs3wdA/viewform"
+                style="
+                  text-decoration: underline;
+                  color: inherit;
+                  font-size: inherit;
+                "
+                >here</a
+              >
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How to register for the events?
+              <svg
+                class="control-icon control-icon-expand"
+                width="24"
+                height="24"
+                role="presentation"
+              >
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#expand-more"
+                />
+              </svg>
+              <svg
+                class="control-icon control-icon-close"
+                width="24"
+                height="24"
+                role="presentation"
+              >
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#close"
+                />
+              </svg>
+            </summary>
+            <p style="text-align: left">
+              To register, click
+              <a
+                href="https://linktr.ee/makerscarnival"
+                style="
+                  text-decoration: underline;
+                  color: inherit;
+                  font-size: inherit;
+                "
+                >here</a
+              >
+              and choose the events in which you're interested.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              When and where the carnival is taking place?
+              <svg
+                class="control-icon control-icon-expand"
+                width="24"
+                height="24"
+                role="presentation"
+              >
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#expand-more"
+                />
+              </svg>
+              <svg
+                class="control-icon control-icon-close"
+                width="24"
+                height="24"
+                role="presentation"
+              >
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#close"
+                />
+              </svg>
+            </summary>
+            <p style="text-align: left">
+              Carnival is going to be held on 30th November and 1st December at
+              JECRC University.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Can I or my team participate in multiple events?
+              <svg
+                class="control-icon control-icon-expand"
+                width="24"
+                height="24"
+                role="presentation"
+              >
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#expand-more"
+                />
+              </svg>
+              <svg
+                class="control-icon control-icon-close"
+                width="24"
+                height="24"
+                role="presentation"
+              >
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#close"
+                />
+              </svg>
+            </summary>
+            <p style="text-align: left">
+              Yes, you can participate in multiple events, kindly go through the
+              schedule for the same
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Can I buy tickets on spot?
+              <svg
+                class="control-icon control-icon-expand"
+                width="24"
+                height="24"
+                role="presentation"
+              >
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#expand-more"
+                />
+              </svg>
+              <svg
+                class="control-icon control-icon-close"
+                width="24"
+                height="24"
+                role="presentation"
+              >
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="#close"
+                />
+              </svg>
+            </summary>
+            <p style="text-align: left">
+              Yes, the tickets for most events will be available on the day of
+              the events too.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+    <!-- faq section end -->
+
+    <!-- FOOTER start -->
+
+    <style>
+      .web_footer_container {
+        /* max-width: 1170px; */
+        margin: -40px auto;
+      }
+      .web_footer_row {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .footer_ul {
+        list-style: none;
+      }
+      .web_footer {
+        /* background-image: url("../images/footer_bg_3_dark.jpg"); */
+        background-color: #222222;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 70px 0;
+        line-height: 1.5;
+        font-family: "Poppins", sans-serif;
+        /* margin: 0; */
+        box-sizing: initial;
+      }
+      .footer-col {
+        /* display: flex; */
+        /* width: 30%; */
+        padding: 0 15px;
+      }
+      .footer-col .footer_list_item .sol_link {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+      }
+      .footer-col .social-links .sol_link {
+        display: inline-block;
+        height: 35px;
+        width: 35px;
+        /* background-color: rgba(255, 255, 255, 0.2); */
+        margin: 10px auto;
+        text-align: center;
+        line-height: 40px;
+        /* border-radius: 50%; */
+        color: #ffffff;
+        transition: all 0.5s ease;
+      }
+
+      .footer-col .social-links .sol_link :hover {
+        transform: scale(1.25);
+      }
+      .social-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 14px;
+        margin: 3px 0px 0px 9px;
+      }
+      @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        [class*="copyright"] {
+          padding-left: 60px;
+        }
+      }
+      .web_footer img{
+        max-width: 100%;
+      }
+    </style>
+
+    <footer class="web_footer" id="footer">
+      <div class="web_footer_container">
+        <br />
+        <div class="web_footer_row">
+          <div style="display: block">
+            <div style="text-align: center; margin: -20px 0 0 10px">
+              <img
+                style="width: 200px"
+                src="images/mks-logo.png"
+                alt="mks
+            logo"
+              />
+            </div>
+            <div
+              class="footer-col"
+              style="display: flex; justify-content: center"
+            >
+              <div class="social-links">
+                <a
+                  class="sol_link"
+                  href="https://www.facebook.com/jumakerspace/"
+                  target="_blank"
+                >
+                  <img src="images/facebook(grey).png" alt="" srcset="" />
+                </a>
+                <a
+                  class="sol_link"
+                  href="https://www.instagram.com/jumakerspace/?hl=en"
+                  target="_blank"
+                >
+                  <img src="images/instagram(grey).png" alt="" srcset=""
+                /></a>
+                <a class="sol_link" href="Mailto:ju.makerspace@jecrcu.edu.in"
+                  ><img
+                    src="images/mail(grey).png"
+                    target="_blank"
+                    alt=""
+                    srcset=""
+                /></a>
+                <a
+                  class="sol_link"
+                  href="https://www.linkedin.com/company/ju-makerspace/"
+                  target="_blank"
+                  ><img src="images/linkedin(grey).png" alt="" srcset=""
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-col">
+            <ul class="footer_ul" style="display: block">
+              <div>
+                <li class="footer_list_item">
+                  <a
+                    class="sol_link"
+                    style="text-align: center; margin-top: 11px; margin-left: 0"
+                    href="https://maps.app.goo.gl/NsnEPB8dXceCU36u7"
+                    target="_blank"
+                    >Presented to you by JU-Makerspace <br />
+                    JECRC University, <br />
+                    Sitapura, Vidhani, Rajasthan <br />
+                    303905
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <ul class="footer_ul" style="display: block">
+              <div>
+                <li class="footer_list_item">
+                  <a
+                    class="sol_link"
+                    style="text-align: center; margin-top: 5px"
+                  >
+                    <b> Contact us </b><br />
+                    Rashi Khanna - +91 76686 72676 <br />
+                    Hemang Joshi - +91 79765 04161 <br />
+                    <!-- Name - +91 XXXXX XXXXX <br /> -->
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <p
+      class="copyright"
+      style="text-align: center; color: white; padding-right: 65px"
+    >
+      &copy copyright ju-makerspace2023
+    </p>
+
+    <!-- footer end -->
+
     <script src="/js/landingPage.js"></script>
-</body>
+  </body>
 </html>

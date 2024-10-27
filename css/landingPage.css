@@ -6,12 +6,12 @@
     --mouse-x: 50%;
     --mouse-y: 50%;
 }
-
+/* 
 *:not(.footer) {
     text-decoration: #fff;
     color: #fff;
     font-family: 'Teletactile', sans-serif;
-}
+} */
 
 h2 {
     font-size: 3.158rem;
