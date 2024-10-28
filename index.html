@@ -766,6 +766,23 @@
     color: white;
     /* align-items: center; */
   }
+
+  .header h1 {
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+  .header h1:after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #ecf0f1;
+            margin: 10px auto 0;
+        }
+  
   .container {
     width: 80%;
     height: 50vh;
@@ -903,7 +920,9 @@
 </style>
 </head>
 <body>
-
+<header class="header">
+        <h1>Past Events</h1>
+    </header>
 <div class="container">
   <div class="cards">
     <div class="card">
