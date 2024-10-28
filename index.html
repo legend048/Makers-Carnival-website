@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/landingPage.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/events.css">
+    <link rel="stylesheet" href="/css/pastEvents.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,7 +24,6 @@
 
     <title>Home</title>
 </head>
-<body>
     <div class="container">
         <!-- Landing Section -->
         <section id="section1" class="landing">            
@@ -51,7 +52,6 @@
         </section>
         
     </div>
-     -->
     <!-- Event  -->
 
     <div class="sec1">
@@ -265,208 +265,6 @@
     </div>
 
     <!-- event timeline start -->
-
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
-      .timeline {
-        display: flex;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        flex-direction: column;
-        max-width: 700px;
-        position: relative;
-        font-family: "Pixelify Sans", sans-serif;
-      }
-      .timeline__content-title {
-        font-weight: normal;
-        font-size: 66px;
-        margin: -10px 0 0 0;
-        transition: 0.4s;
-        padding: 0 10px;
-        box-sizing: border-box;
-        /* font-family: "Pathway Gothic One", sans-serif; */
-        color: #fff;
-      }
-      .timeline__content-desc {
-        margin: 0;
-        font-size: 17px;
-        box-sizing: border-box;
-        color: rgba(255, 255, 255, 0.9);
-        /* font-family: Cardo; */
-        font-weight: 700;
-        line-height: 22px;
-      }
-      .timeline:before {
-        position: absolute;
-        left: 50%;
-        width: 2px;
-        height: 100%;
-        margin-left: -1px;
-        content: "";
-        background: rgba(255, 255, 255, 0.07);
-      }
-      @media only screen and (max-width: 767px) {
-        .timeline:before {
-          left: 40px;
-        }
-      }
-      .timeline-item {
-        padding: 10px 0;
-        opacity: 0.3;
-        filter: blur(2px);
-        transition: 0.5s;
-        box-sizing: border-box;
-        width: calc(50% - 40px);
-        display: flex;
-        position: relative;
-        /* transform: translateY(-80px); */
-      }
-      .timeline-item:before {
-        content: attr(data-text);
-        letter-spacing: 3px;
-        width: 100%;
-        position: absolute;
-        color: rgba(255, 255, 255, 1);
-        font-size: 20px;
-        /* font-family: "VT323", serif; */
-        border-left: 2px solid rgba(255, 255, 255, 0.9);
-        top: 70%;
-        margin-top: -15px;
-        padding-left: 15px;
-        opacity: 0;
-        right: calc(-100% - 56px);
-        font-weight: 800;
-      }
-      .timeline-item:nth-child(even) {
-        align-self: flex-end;
-      }
-      .timeline-item:nth-child(even):before {
-        right: auto;
-        text-align: right;
-        left: calc(-100% - 56px);
-        padding-left: 0;
-        border-left: none;
-        border-right: 2px solid rgba(255, 255, 255, 0.5);
-        padding-right: 15px;
-      }
-      .timeline-item--active {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0px);
-      }
-      .timeline-item--active:before {
-        top: 50%;
-        transition: 0.3s all 0.2s;
-        opacity: 1;
-      }
-      .timeline-item--active .timeline__content-title {
-        margin: -50px 0 20px 0;
-        text-shadow: 0 0 7px black;
-      }
-      @media only screen and (max-width: 767px) {
-        .timeline-item {
-          align-self: baseline !important;
-          width: 100%;
-          padding: 0 30px 150px 80px;
-        }
-        .timeline-item:before {
-          left: 10px !important;
-          padding: 0 !important;
-          top: 50px;
-          text-align: center !important;
-          width: 60px;
-          border: none !important;
-        }
-        .timeline-item:last-child {
-          padding-bottom: 40px;
-        }
-      }
-      .timeline__img {
-        max-width: 100%;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
-      }
-      .timeline-container {
-        width: 100%;
-        position: relative;
-        padding: 80px 0;
-        transition: 0.3s ease 0s;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      .timeline-container:before {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(99, 99, 99, 0.8);
-        content: "";
-      }
-      .timeline-header {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 80px;
-        position: relative;
-      }
-      .timeline-header__title {
-        color: #fff;
-        font-size: 46px;
-        font-family: "Pixelify Sans", sans-serif;
-        font-weight: normal;
-        margin: 0;
-      }
-      .timeline-header__subtitle {
-        color: rgba(255, 255, 255, 0.5);
-        font-family: "VT323", serif;
-        font-size: 24px;
-        letter-spacing: 5px;
-        margin: 10px 0 0 0;
-        font-weight: normal;
-      }
-      .timeline-item--active .timeline__content {
-        box-shadow: 0px 0px 40px 20px rgba(0, 0, 0, 0.3);
-        background: rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-      }
-
-      @media only screen and (max-width: 767px) {
-        .timeline-item:before {
-            width: 0%;
-            opacity: 0;
-        }
-
-        .timeline__content-title{
-            font-size: 45px;
-            text-align: center;
-        }
-
-        .timeline-item--active .timeline__content-title {
-            margin: -40px 0 0 0;
-        }
-
-        .timeline:before {
-            position: absolute;
-            left: 0%;
-            width: 0px;
-            height: 0%;
-            margin-left: 0;
-            content: "";
-            background: rgba(255, 255, 255, 0.07);
-        }
-
-        .timeline-item{
-            padding: 0 30px 150px;
-        }
-
-        .timeline__content-desc{
-            text-align: center
-        }
-      }
-    </style>
-
     <div class="timeline-container" id="timeline-1">
       <div class="timeline-header">
         <h2 class="timeline-header__title">Event Timeline</h2>
@@ -535,405 +333,9 @@
         </div>
       </div>
     </div>
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        function initTimeline(timelineId) {
-          var timeline = document.getElementById(timelineId);
-          var items = timeline.querySelectorAll(".timeline-item");
-          var activeClass = "timeline-item--active";
-          var backgroundImageElement = timeline;
-
-          // Set the initial background image and active item
-          items[0].classList.add(activeClass);
-          backgroundImageElement.style.backgroundImage =
-            "url('" +
-            items[0].querySelector(".timeline__img").getAttribute("src") +
-            "')";
-
-          // Options for the IntersectionObserver
-          var options = {
-            root: null, // Use the viewport as the root
-            rootMargin: "0px",
-            threshold: 0.7,
-          };
-
-          // Create the IntersectionObserver
-          var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                var index = Array.from(items).indexOf(entry.target);
-                var currentItem = items[index];
-
-                // Update active class
-                items.forEach(function (itm) {
-                  itm.classList.remove(activeClass);
-                });
-                currentItem.classList.add(activeClass);
-                // Update background image
-                backgroundImageElement.style.backgroundImage =
-                  "url(" +
-                  JSON.stringify(
-                    currentItem
-                      .querySelector(".timeline__img")
-                      .getAttribute("src")
-                  ) +
-                  ")";
-              }
-            });
-          }, options);
-
-          // Observe each timeline item
-          items.forEach(function (item) {
-            observer.observe(item);
-          });
-        }
-
-        // Initialize the timeline
-        initTimeline("timeline-1");
-      });
-    </script> -->
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        function initTimeline(timelineId) {
-          const timeline = document.getElementById(timelineId);
-          const items = timeline.querySelectorAll(".timeline-item");
-          const activeClass = "timeline-item--active";
-          const backgroundImageElement = timeline;
-
-          // Set the initial background image and active item
-          setInitialState(items, backgroundImageElement, activeClass);
-
-          // IntersectionObserver configuration
-          const observerOptions = {
-            root: null, // Use the viewport as the root
-            rootMargin: "0px",
-            threshold: 0.8,
-          };
-
-          // Create the observer
-          const observer = new IntersectionObserver(
-            handleIntersect,
-            observerOptions
-          );
-
-          // Observe each timeline item
-          items.forEach((item) => observer.observe(item));
-
-          // Handle intersection events
-          function handleIntersect(entries) {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                updateActiveItem(
-                  entry.target,
-                  items,
-                  backgroundImageElement,
-                  activeClass
-                );
-              }
-            });
-          }
-        }
-
-        // Set the initial state
-        function setInitialState(items, backgroundImageElement, activeClass) {
-          items[0].classList.add(activeClass);
-          setBackgroundImage(backgroundImageElement, items[0]);
-        }
-
-        // Update the active timeline item
-        function updateActiveItem(
-          currentItem,
-          items,
-          backgroundImageElement,
-          activeClass
-        ) {
-          items.forEach((item) => item.classList.remove(activeClass));
-          currentItem.classList.add(activeClass);
-          setBackgroundImage(backgroundImageElement, currentItem);
-        }
-
-        // Set background image for the timeline container
-        function setBackgroundImage(element, item) {
-          const imageUrl = JSON.stringify(
-            item.querySelector(".timeline__img").getAttribute("src")
-          );
-          element.style.backgroundImage = "url(" + imageUrl + ")";
-        }
-
-        // Initialize the timeline
-        initTimeline("timeline-1");
-      });
-    </script>
-
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          function initTimeline(timelineId) {
-            const timeline = document.getElementById(timelineId);
-            const items = timeline.querySelectorAll(".timeline-item");
-            const activeClass = "timeline-item--active";
-            const backgroundImageElement = timeline;
-      
-            // Set the initial background image and active items
-            setInitialState(items, backgroundImageElement, activeClass);
-      
-            // IntersectionObserver configuration
-            const observerOptions = {
-              root: null, // Use the viewport as the root
-              rootMargin: "0px",
-              threshold: 0.8, // Trigger when 70% of the item is visible
-            };
-      
-            // Create the observer
-            const observer = new IntersectionObserver(handleIntersect, observerOptions);
-      
-            // Observe each timeline item
-            items.forEach((item) => observer.observe(item));
-      
-            // Handle intersection events
-            function handleIntersect(entries) {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  // Add active class to all intersecting items
-                  entry.target.classList.add(activeClass);
-                  // Update the background image for all active items
-                  setBackgroundImage(backgroundImageElement, entry.target);
-                } else {
-                  // Remove active class if the item is not intersecting
-                  entry.target.classList.remove(activeClass);
-                }
-              });
-            }
-          }
-      
-          // Set the initial state
-          function setInitialState(items, backgroundImageElement, activeClass) {
-            items.forEach((item) => {
-              if (isElementInViewport(item)) {
-                item.classList.add(activeClass);
-                setBackgroundImage(backgroundImageElement, item);
-              }
-            });
-          }
-      
-          // Update the background image for the timeline container
-          function setBackgroundImage(element, item) {
-            const imageUrl = JSON.stringify(item.querySelector(".timeline__img").getAttribute("src"));
-            element.style.backgroundImage = "url(" + imageUrl + ")";
-          }
-      
-          // Utility function to check if an element is in the viewport
-          function isElementInViewport(el, threshold = 0.8) {
-            const rect = el.getBoundingClientRect();
-            const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-            const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
-      
-            // Calculate how much of the element is visible
-            const verticalVisible = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
-            const horizontalVisible = Math.min(rect.right, windowWidth) - Math.max(rect.left, 0);
-            const elementArea = rect.height * rect.width;
-            const visibleArea = verticalVisible * horizontalVisible;
-      
-            // Check if the visible area is above the threshold
-            return (visibleArea / elementArea) >= threshold;
-          }
-      
-          // Initialize the timeline
-          initTimeline("timeline-1");
-        });
-    </script>
-       -->
 
     <!-- event timeline end -->
-
     <!----Past Events Section Starts---->
-    
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Card Slider</title>
-<style>
-  body {
-    /* display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    min-height: 100vh;
-    background-color: #0033cc;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-    /* align-items: center; */
-  }
-  .container {
-    width: 80%;
-    height: 50vh;
-    position: relative;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .container1 {
-    width: 80%;
-    height: 50vh;
-    position: relative;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .cards {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-
-  .cards1 {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-
-  .card {
-    min-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .card1 {
-    min-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .card img {
-    width: 45%;
-    border-radius: 8px;
-  }
-
-  .card1 img {
-    width: 45%;
-    border-radius: 8px;
-  }
-
-  .card-content {
-    width: 45%;
-  }
-
-  .card-content {
-    width: 45%;
-  }
-
-  .arrows {
-    position: absolute;
-    top: 95%;
-    width: 100%;
-    display: flex;
-    transform: translateY(-50%);
-  }
-
-  #next{
-    margin-left: 41%;
-  }
-
-  #prev{
-    margin-left: 15px;
-  }
-
-  .arrow {
-    font-size: 3rem;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .arrows1 {
-    position: absolute;
-    top: 95%;
-    width: 100%;
-    display: flex;
-    transform: translateY(-50%);
-  }
-
-  #next1{
-    margin-left: 500px;
-  }
-  
-  #prev1{
-    margin-left: 55%;
-  }
-  
-  .arrow1 {
-    font-size: 3rem;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  @media (max-width: 768px) {
-    .container, .container1 {
-      width: 90%;
-      height: auto;
-    }
-    .card img, .card1 img {
-      width: 60%;
-      margin-bottom: 10px;
-    }
-    .card-content, .card-content1 {
-      width: 100%;
-      text-align: center;
-    }
-    .arrows, .arrows1 {
-      top: 95%;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .container, .container1 {
-      width: 100%;
-    }
-    .arrows, .arrows1 {
-      font-size: 1.5rem;
-    }
-  }
-</style>
-</head>
-<body>
-
-<div class="container">
-  <div class="cards">
-    <div class="card">
-      <img src="images\Robo_cars.jpeg" alt="Image 1">
-      <div class="card-content">
-        <h2>Card 1 Title</h2>
-        <p>Experience the highlights of last year's conference with exclusive photos and videos.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images\Writtern_Robot.jpeg" alt="Image 2">
-      <div class="card-content">
-        <h2>Card 2 Title</h2>
-        <p>We hold an IT conference every year, bringing together developers and specialists from all over the world.</p>
-      </div>
-    </div>
-    <div class="card">
-        <img src="images\Robots_car.jpeg" alt="Image 2">
-        <div class="card-content">
-          <h2>Card 3 Title</h2>
-          <p>We hold an IT conference every year, bringing together developers and specialists from all over the world.</p>
-        </div>
-      </div>
-    <!-- Add more cards as needed -->
-  </div>
-  <div class="arrows">
-    <span class="arrow" id="prev">&laquo;</span>
-    <span class="arrow" id="next">&raquo;</span>
-  </div>
-</div>
 
 <div class="container1">
     <div class="cards1">
@@ -966,70 +368,9 @@
     </div>
   </div>
 
-<script>
-  const cards = document.querySelector('.cards');
-  const cardCount = document.querySelectorAll('.card').length;
-  let currentIndex = 0;
-
-  document.getElementById('next').addEventListener('click', () => {
-    if (currentIndex < cardCount - 1) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-    }
-    updateCardPosition1();
-  });
-
-  document.getElementById('prev').addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-    } else {
-      currentIndex = cardCount - 1;
-    }
-    updateCardPosition1();
-  });
-
-  function updateCardPosition1() {
-    const cardWidth = document.querySelector('.card').offsetWidth;
-    cards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  }
-
-  const cards1 = document.querySelector('.cards1');
-  const cardCount1 = document.querySelectorAll('.card1').length;
-  let currentIndex1 = 0;
-
-  document.getElementById('next1').addEventListener('click', () => {
-    if (currentIndex1 < cardCount1 - 1) {
-      currentIndex1++;
-    } else {
-      currentIndex1 = 0;
-    }
-    updateCardPosition();
-  });
-
-  document.getElementById('prev1').addEventListener('click', () => {
-    if (currentIndex1 > 0) {
-      currentIndex1--;
-    } else {
-      currentIndex1 = cardCount1 - 1;
-    }
-    updateCardPosition();
-  });
-
-  function updateCardPosition() {
-    const cardWidth1 = document.querySelector('.card1').offsetWidth;
-    cards1.style.transform = `translateX(-${currentIndex1 * cardWidth1}px)`;
-  }
-</script>
-
-</body>
-</html>
-
-
-   <!----Past Events Section Ends---->
-
-  
+  <!----Past Events Section Ends---->
     <!-- faq section start -->
+
     <style>
       @import url("https://fonts.googleapis.com/css?family=Raleway:300&display=swap");
       @import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
@@ -1505,7 +846,6 @@
     <!-- faq section end -->
 
     <!-- FOOTER start -->
-
     <style>
       .web_footer_container {
         /* max-width: 1170px; */
@@ -1672,7 +1012,6 @@
     >
       &copy copyright ju-makerspace2023
     </p>
-
     <!-- footer end -->
 
     <!-- bootstrap  -->
@@ -1694,7 +1033,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    
     <!-- js -->
+     <script src="/js/events.js"></script>
+    <script src="/js/pastEvents.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/landingPage.js"></script>
   </body>

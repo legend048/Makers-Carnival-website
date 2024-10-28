@@ -1,0 +1,137 @@
+.container1 {
+    width: 80%;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.cards1 {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card1 {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 45%;
+    border-radius: 8px;
+}
+
+.card1 img {
+    width: 45%;
+    border-radius: 8px;
+}
+
+.card-content {
+    width: 45%;
+}
+
+.card-content {
+    width: 45%;
+}
+
+.arrows {
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    display: flex;
+    transform: translateY(-50%);
+}
+
+#next {
+    margin-left: 41%;
+}
+
+#prev {
+    margin-left: 15px;
+}
+
+.arrow {
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrows1 {
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    display: flex;
+    transform: translateY(-50%);
+}
+
+#next1 {
+    margin-left: 500px;
+}
+
+#prev1 {
+    margin-left: 55%;
+}
+
+.arrow1 {
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+
+    .container,
+    .container1 {
+        width: 90%;
+        height: auto;
+    }
+
+    .card img,
+    .card1 img {
+        width: 60%;
+        margin-bottom: 10px;
+    }
+
+    .card-content,
+    .card-content1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .arrows,
+    .arrows1 {
+        top: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container,
+    .container1 {
+        width: 100%;
+    }
+
+    .arrows,
+    .arrows1 {
+        font-size: 1.5rem;
+    }
+}
