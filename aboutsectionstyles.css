@@ -1,0 +1,86 @@
+/* General Styles */
+body {
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+   
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  /* Wrapper for the About Section */
+.about-wrapper {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Heading Styling */
+.about-heading {
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: space-between; /* Align containers horizontally */
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual Containers */
+.about-container {
+  background-color: #000000;
+  border: 2px solid #252222;
+  border-radius: 10px;
+  width: 30%; /* Ensure equal width */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(248, 245, 245, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(252, 252, 252, 0.2);
+}
+
+.about-image {
+    max-width: 100px; /* Set the width of the image */
+    max-height: 100px; /* Set the height of the image */
+    margin-bottom: 15px; /* Add spacing below the image */
+    border-radius: 10px; /* Optional: Add rounded corners to the image */
+    object-fit: cover; /* Ensures the image fits nicely within the dimensions */
+  }
+
+/* Heading Styling for Containers */
+.about-container h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #ffc107;;
+}
+
+/* Paragraph Styling */
+.about-container p {
+  font-size: 1em;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* Optional: Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .about-section {
+    flex-wrap: wrap; /* Allow stacking of containers */
+    justify-content: center;
+  }
+
+  .about-container {
+    width: 80%; /* Increase width for smaller screens */
+    margin-bottom: 20px;
+  }
+}
