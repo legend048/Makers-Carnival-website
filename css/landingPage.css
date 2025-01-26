@@ -60,13 +60,14 @@ body {
 .logo {
     position: absolute;
     top: 0;
-    left: 0;
-    margin: 3rem;
+    left: 50%;
+    /* margin: 3rem; */
     z-index: 10;
+    transform: translateX(-50%);
 }
 
 .logo img {
-    width: 150px;
+    width: 400px;
     height: auto;
 }
 
@@ -254,6 +255,10 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    .logo img {
+        width: 320px;
+        height: auto;
+    }    
     .flipclock {
         padding: 6.67vw;
     }

@@ -38,7 +38,7 @@
       .sub-text{
         position: absolute;
         z-index: 10;
-        top: 85%;
+        top: 80%;
         left: 50%;
         transform: translateX(-50%);
         /* width: 200px;
@@ -50,6 +50,10 @@
         text-align: center;
       }
 
+      .sub-text a {
+        text-decoration: underline;
+      }
+
       @media (max-width: 655px) {
         .sub-text{
           font-size: 25px;
@@ -57,7 +61,129 @@
       }
     </style>
 
-  
+    <style>
+
+.glassy-button {
+  --_padding: 1rem 1.5rem;
+  --_transition-speed: 200ms;
+  --_hover-opacity: 0.4;
+  --_pressed-opacity: 0.15;
+  --_hover-blurriness: 5px;
+  --_pressed-blurriness: 10px;
+  --_frostiness: 0.3;
+  --_hover-offset: 0.5rem;
+  --_pressed-offset: 0.25rem;
+  --_motion-factor: 0.1; /* 0 -> 1 */
+
+  outline: 0;
+  cursor: pointer;
+  font: inherit;
+  color: var(--button-text);
+  font-weight: 500;
+  padding: 0;
+  border: 0;
+  border-radius: 1rem;
+  background-color: transparent;
+  position: relative;
+
+  span {
+    display: block;
+    overflow: hidden;
+    padding: var(--_padding);
+    border-radius: inherit;
+    background-color: hsl(0 0% 100% / 0);
+    backdrop-filter: blur(0px);
+    font-size: larger;
+    font-weight: 600;
+    transition: background-color var(--_transition-speed),
+      backdrop-filter var(--_transition-speed),
+      translate var(--_transition-speed);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image: url("data:image/svg+xml, %3C!-- svg: first layer --%3E%3Csvg viewBox='0 0 171 171' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.74' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0;
+      transition: opacity var(--_transition-speed);
+    }
+  }
+/* 
+  &::before {
+    z-index: 100;
+  } */
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    background-color: hsl(197, 88%, 58%);
+    transition: scale var(--_transition-speed),
+      translate var(--_transition-speed);
+    animation: exit forwards var(--_transition-speed);
+  }
+
+  &:hover,
+  &:focus-visible {
+    span {
+      outline: 1px solid hsl(0 0% 100% / 0.7);
+      background-color: hsl(0 0% 100% / var(--_hover-opacity));
+      backdrop-filter: blur(var(--_hover-blurriness));
+      translate: 0 calc(var(--_hover-offset) * -1);
+
+      &::before {
+        opacity: var(--_frostiness);
+      }
+    }
+    &::after {
+      scale: 0.95;
+      translate: 0 0.125rem;
+      animation: enter forwards var(--_transition-speed);
+    }
+  }
+
+  &:active {
+    span {
+      backdrop-filter: blur(var(--_pressed-blurriness));
+      background-color: hsl(0 0% 100% / var(--_pressed-opacity));
+      translate: 0 calc(var(--_pressed-offset) * -1);
+    }
+    &::after {
+      scale: 0.875;
+      translate: 0 0.25rem;
+    }
+  }
+}
+
+@keyframes enter {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(
+      calc(var(--_x-motion) * var(--_motion-factor) * -1),
+      calc(var(--_y-motion) * var(--_motion-factor) * -1)
+    );
+  }
+}
+
+@keyframes exit {
+  from {
+    transform: translate(
+      calc(var(--_x-motion) * var(--_motion-factor) * -1),
+      calc(var(--_y-motion) * var(--_motion-factor) * -1)
+    );
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+
+    </style>
 
     <title>Makers Carnival</title>
   </head>
@@ -67,10 +193,10 @@
       <section id="section1" class="landing">
         <!-- <div class="mask"></div> -->
         <div class="logo">
-          <img src="/assets/JU-Logo.png" alt="JECRC logo" />
+          <img src="/assets/imgs/uni logo.png" alt="JECRC logo" />
         </div>
         <div id="magic"></div>
-        <div class="sub-text">Coming Soon</div>
+        <div class="sub-text">29th - 30th Jan <br><a href="https://linktr.ee/makerscarnival2025">LinkTree</a></div>
       </section>
     </div>
 
@@ -121,9 +247,9 @@
           <img src="JU-Logo.png" alt="JECRC Image" class="about-image" />
           <h3>JECRC University</h3>
           <p>
-            JECRC University is a premier institution dedicated to fostering
-            academic excellence, innovation, and research in a vibrant campus
-            environment.
+            JECRC University is located in the culturally vibrant city of Jaipur, Rajasthan, and is known for its strong commitment to academic excellence and innovative approaches.
+            The university's 32-acre campus seamlessly combines classical architectural aesthetics with contemporary landscaping, creating a conducive environment for both learning and research. 
+            Situated in the midst of Rajasthan's thriving entrepreneurial ecosystem, our institution is fully devoted to preparing the future leaders, upholding the values of tradition while embracing innovative practices
           </p>
         </div>
         <!-- Maker Space Container -->
@@ -131,19 +257,18 @@
           <img src="mks-logo.png" alt="JECRC Image" class="about-image" />
           <h3>MakerSpace</h3>
           <p>
-            JU Makerspace is a hub for creativity and innovation, offering
-            state-of-the-art tools and resources for students to bring their ideas
-            to life.
+            Inspired by the genius of Leonardo da Vinci, the Makers Carnival brings together creativity and innovation in a celebration of art, science, and technology.
+Hosted by JU Makerspace at JECRC University.
+
+With project exhibitions, interactive sessions, and hands-on activities, this carnival is a chance for students from schools and colleges to explore and create, just like da Vinci did, pushing the boundaries of imagination and invention. Join us and experience how the past meets the future through technology!
           </p>
         </div>
         <!-- Maker Carnival Container -->
         <div class="about-container column-item">
-          <img src="mks-logo.png" alt="JECRC Image" class="about-image" />
+          <img src="assets/imgs/carnival logo.png" alt="JECRC Image" class="about-image" />
           <h3>Makers Carnival</h3>
           <p>
-            The Makers Carnival is an annual event celebrating innovation,
-            creativity, and collaboration, showcasing projects from students and
-            professionals.
+            The Maker's Carnival, a vibrant two-day event by JUMakerspace at JECRC University! Experience captivating quizzes, inspiring project showcases, and insightful panel discussions on sustainable development goals. Enjoy live music performances and bonfire gatherings as we celebrate creativity with participants from Jaipur's schools and colleges across India. Don't miss this joyful and collaborative experience!
           </p>
         </div>
       </div>
@@ -353,112 +478,138 @@
     </style>
 
     <div class="timeline-container" id="timeline-1">
-      <div class="timeline-header">
+      <d class="timeline-header">
         <h2 class="timeline-header__title">Event Timeline</h2>
-        <h3 class="timeline-header__subtitle">Day 1</h3>
+        <div style="position: relative; z-index: 10; left: 50%; transform: translateX(-50%); margin: 10px">
+          <button class="glassy-button" onclick="daychange('1')"><span>Day 1</span></button>
+          <button class="glassy-button" onclick="daychange('2')"><span>Day 2</span></button>
+        </div>
+      <div class="timeline" id="day1">
+          <div class="timeline-item" data-text="INAUGRATION">
+            <div class="timeline__content">
+              <img
+                class="timeline__img"
+                src="assets\event_imgs\robo soccer.webp"
+              />
+              <h2 class="timeline__content-title">09:00 AM</h2>
+          
+            </div>
+          </div>
+          <div class="timeline-item" data-text="PROJECT EXHIBITION">
+            <div class="timeline__content">
+              <img
+                class="timeline__img"
+                src="assets\event_imgs\robo sumo_1.webp"
+              />
+              <h2 class="timeline__content-title">10:00 AM</h2>
+          
+            </div>
+          </div>
+          <div class="timeline-item" data-text="ROBO SUMO">
+            <div class="timeline__content">
+              <img
+                class="timeline__img"
+                src="assets\event_imgs\robo sumo_2.webp"
+              />
+              <h2 class="timeline__content-title">12:00 PM</h2>
+          
+            </div>
+          </div>
+          <div class="timeline-item" data-text="Squid Game">
+            <div class="timeline__content">
+              <img
+                class="timeline__img"
+                src="assets\event_imgs\robo sumo_3.webp"
+              />
+              <h2 class="timeline__content-title">01:30 PM</h2>
+          
+            </div>
+          </div>
+          <div class="timeline-item" data-text="Maze Runner">
+            <div class="timeline__content">
+              <img
+                class="timeline__img"
+                src="assets\event_imgs\robo sumo_3.webp"
+              />
+              <h2 class="timeline__content-title">02:00 PM</h2>
+          
+            </div>
+          </div>
+          <div class="timeline-item" data-text="ROBO SOCCER">
+            <div class="timeline__content">
+              <img
+                class="timeline__img"
+                src="assets\event_imgs\robo sumo_3.webp"
+              />
+              <h2 class="timeline__content-title">04:00 PM</h2>
+          
+            </div>
+          </div>
       </div>
-      <div class="timeline">
-        <div class="timeline-item" data-text="Robo Soccer">
+      <div class="timeline" id="day2" style="display: none;">
+        <div class="timeline-item" data-text="PROJECT EXHIBITION">
           <div class="timeline__content">
             <img
               class="timeline__img"
               src="assets\event_imgs\robo soccer.webp"
             />
             <h2 class="timeline__content-title">10:00 AM</h2>
-            
           </div>
         </div>
-        <div class="timeline-item" data-text="Robo Soccer">
+
+        <div class="timeline-item" data-text="ROBO SUMO">
           <div class="timeline__content">
             <img
               class="timeline__img"
-              src="assets\event_imgs\robo sumo_1.webp"
+              src="assets\event_imgs\robo soccer.webp"
             />
-            <h2 class="timeline__content-title">10:00 AM</h2>
-            
+            <h2 class="timeline__content-title">12:00 PM</h2>
           </div>
         </div>
-        <div class="timeline-item" data-text="Robo Soccer">
+
+        <div class="timeline-item" data-text="Shadow Hunt">
           <div class="timeline__content">
             <img
               class="timeline__img"
-              src="assets\event_imgs\robo sumo_2.webp"
+              src="assets\event_imgs\robo soccer.webp"
             />
-            <h2 class="timeline__content-title">10:00 AM</h2>
-            
+            <h2 class="timeline__content-title">02:00 PM</h2>
           </div>
         </div>
-        <div class="timeline-item" data-text="Robo Soccer">
+
+        <div class="timeline-item" data-text="Marine Rush">
           <div class="timeline__content">
             <img
               class="timeline__img"
-              src="assets\event_imgs\robo sumo_3.webp"
+              src="assets\event_imgs\robo soccer.webp"
             />
-            <h2 class="timeline__content-title">10:00 AM</h2>
-            
+            <h2 class="timeline__content-title">02:00 PM</h2>
           </div>
         </div>
+
+        <div class="timeline-item" data-text="VALEDICTORY CEREMONY">
+          <div class="timeline__content">
+            <img
+              class="timeline__img"
+              src="assets\event_imgs\robo soccer.webp"
+            />
+            <h2 class="timeline__content-title">04:00 PM</h2>
+          </div>
+        </div>
+
+        
+        <div class="timeline-item" data-text="Capture the flag">
+          <div class="timeline__content">
+            <img
+              class="timeline__img"
+              src="assets\event_imgs\robo soccer.webp"
+            />
+            <h2 class="timeline__content-title">05:00 PM</h2>
+          </div>
+        </div>
+
       </div>
     </div>
-
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        function initTimeline(timelineId) {
-          var timeline = document.getElementById(timelineId);
-          var items = timeline.querySelectorAll(".timeline-item");
-          var activeClass = "timeline-item--active";
-          var backgroundImageElement = timeline;
-
-          // Set the initial background image and active item
-          items[0].classList.add(activeClass);
-          backgroundImageElement.style.backgroundImage =
-            "url('" +
-            items[0].querySelector(".timeline__img").getAttribute("src") +
-            "')";
-
-          // Options for the IntersectionObserver
-          var options = {
-            root: null, // Use the viewport as the root
-            rootMargin: "0px",
-            threshold: 0.7,
-          };
-
-          // Create the IntersectionObserver
-          var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                var index = Array.from(items).indexOf(entry.target);
-                var currentItem = items[index];
-
-                // Update active class
-                items.forEach(function (itm) {
-                  itm.classList.remove(activeClass);
-                });
-                currentItem.classList.add(activeClass);
-                // Update background image
-                backgroundImageElement.style.backgroundImage =
-                  "url(" +
-                  JSON.stringify(
-                    currentItem
-                      .querySelector(".timeline__img")
-                      .getAttribute("src")
-                  ) +
-                  ")";
-              }
-            });
-          }, options);
-
-          // Observe each timeline item
-          items.forEach(function (item) {
-            observer.observe(item);
-          });
-        }
-
-        // Initialize the timeline
-        initTimeline("timeline-1");
-      });
-    </script> -->
-
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         function initTimeline(timelineId) {
@@ -622,7 +773,7 @@
 
     <!-- Event  -->
 
-    <div class="sec1">
+    <!-- <div class="sec1">
       <div class="container">
         <div class="top-div">
           <img
@@ -775,7 +926,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- intro -->
 
@@ -803,11 +954,11 @@
       <div class="main-sec2">
         <div class="main-div1">
           <div class="int">introduction</div>
-          <h1>Our Speaker</h1>
+          <h1>Our Events</h1>
           <p>
-            Meet our next speaker, [Speaker's Name], an expert in
-            [specialization]. They're here to share insights on [topic of
-            discussion] that will inspire and inform!
+            This is one of our many exciting events designed to challenge,
+             entertain, and inspire you. Dive in, compete,
+              and enjoy every moment of the experience!
           </p>
           <div class="buton-div">
             <div class="butt" onclick="leftt()"></div>
@@ -822,10 +973,9 @@
                   src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
                 />
                 <div class="info">
-                  <h1>Mountain</h1>
+                  <h1>ROBO SUMO</h1>
                   <p>
-                    Lorem Ipsum is simply dummy text from the printing and typeseting
-                    industry
+                    Bots engineered by the participants are brought to the ring for an ultimate showdown where they push their opponent’s bot out of the boundary.
                   </p>
                 </div>
               </div>
@@ -838,10 +988,9 @@
                   src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
                 />
                 <div class="info">
-                  <h1>Mountain</h1>
+                  <h1>Squid Game</h1>
                   <p>
-                    Lorem Ipsum is simply dummy text from the printing and typeseting
-                    industry
+                    Tech Edition is a three-level tech-infused challenge that puts your creativity, problem-solving, and technical skills to the ultimate test. Inspired by the thrilling games from the series, each level has been reimagined to incorporate innovative technology, creating a unique and immersive experience.
                   </p>
                 </div>
               </div>
@@ -854,10 +1003,9 @@
                   src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
                 />
                 <div class="info">
-                  <h1>Mountain</h1>
+                  <h1>Maze Runner</h1>
                   <p>
-                    Lorem Ipsum is simply dummy text from the printing and typeseting
-                    industry
+                    The Maze Runner Challenge is an exciting event where participants design and program robots to navigate through a complex maze filled with twists, turns, and obstacles. The goal is to reach the finish line in the shortest time while overcoming challenges such as dead ends, sharp corners, and unpredictable paths.
                   </p>
                 </div>
               </div>
@@ -870,10 +1018,69 @@
                   src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
                 />
                 <div class="info">
-                  <h1>Mountain</h1>
+                  <h1>ROBO SOCCER</h1>
                   <p>
-                    Lorem Ipsum is simply dummy text from the printing and typeseting
-                    industry
+                    Bots engineered by the participants put their mini-gladiators on the field and goal towards their win.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m">
+            <div class="box-spek">
+              <div class="speaker-card">
+                <img
+                  src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                />
+                <div class="info">
+                  <h1>ROBO SUMO</h1>
+                  <p>
+                    Bots engineered by the participants put their mini-gladiators on the field and fight for their win.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m">
+            <div class="box-spek">
+              <div class="speaker-card">
+                <img
+                  src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                />
+                <div class="info">
+                  <h1>Shadow Hunt</h1>
+                  <p>
+                    Shadow Hunt: Enter the world of darkness, Defeat the shadow lord by solving various challenges in series like dar-shooting, Dancing laser stepping stones, and many more. in an environment of audio-visual spectacles.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m">
+            <div class="box-spek">
+              <div class="speaker-card">
+                <img
+                  src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                />
+                <div class="info">
+                  <h1>Marine Rush</h1>
+                  <p>
+                    Marine Rush is an exciting event where participants build and operate robotic boats to compete in a series of water-based challenges.This event emphasizes skills in designing efficient boat mechanisms, waterproofing, propulsion systems, and control strategies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m">
+            <div class="box-spek">
+              <div class="speaker-card">
+                <img
+                  src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                />
+                <div class="info">
+                  <h1>Capture the flag</h1>
+                  <p>
+                    Bots are put in a one-on-one competition where a bot has to capture the opponent’s flags by using the lasers built in them.
                   </p>
                 </div>
               </div>
@@ -1510,8 +1717,7 @@
                   >
                     <b> Contact us </b><br />
                     Rashi Khanna - +91 76686 72676 <br />
-                    Hemang Joshi - +91 79765 04161 <br />
-                    <!-- Name - +91 XXXXX XXXXX <br /> -->
+                    Prakhar Sharma - +91 96604 01770
                   </a>
                 </li>
               </div>
@@ -1550,5 +1756,34 @@
     ></script>
     <!-- js -->
     <script src="/js/script.js"></script>
+
+    <script>
+      const glassyButtons = document.querySelectorAll(".glassy-button");
+      glassyButtons.forEach((button) => {
+        button.addEventListener("mousemove", (event) => {
+          const centerX = button.offsetWidth / 2;
+          const centerY = button.offsetHeight / 2;
+
+          const offsetX = event.offsetX - centerX;
+          const offsetY = event.offsetY - centerY;
+
+          button.style.setProperty("--_x-motion", `${offsetX}px`);
+          button.style.setProperty("--_y-motion", `${offsetY}px`);
+        });
+      });
+
+      function daychange(day){
+        if (day == '1'){
+          document.getElementById('day2').style.display = 'none'
+          document.getElementById('day1').style.display = 'flex'
+        }
+        if (day == '2'){
+          document.getElementById('day1').style.display = 'none'
+          document.getElementById('day2').style.display = 'flex'
+        }
+      }
+
+    </script>
+
   </body>
 </html>

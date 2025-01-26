@@ -57,9 +57,10 @@ body {
 }
 
 .about-image {
-    max-width: 100px; /* Set the width of the image */
-    max-height: 100px; /* Set the height of the image */
-    margin-bottom: 15px; /* Add spacing below the image */
+    width: 100%;
+    max-width: 300px; /* Set the width of the image */
+    /* max-height: 100px; */
+    margin: 15px; /* Add spacing below the image */
     border-radius: 10px; /* Optional: Add rounded corners to the image */
     object-fit: cover; /* Ensures the image fits nicely within the dimensions */
   }
@@ -111,6 +112,7 @@ body {
 
   .column-item{
     flex: 1 1 100%;
+    max-width: 100%;
     width: 100%;
   }
 }

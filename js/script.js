@@ -37,7 +37,7 @@ const t2 = gsap.timeline({
         trigger: ".sec2 ",
         start: "top 0",
         end: "bottom",
-        scrub: 4,
+        scrub: 8,
         pin: true,
     }
 })
@@ -45,7 +45,7 @@ const t2 = gsap.timeline({
 
 t2.to(".m", {
     delay: 0,
-    transform: "translatex(-200%)",
+    transform: "translatex(-575%)",
 
 })
 

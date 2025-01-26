@@ -1,7 +1,12 @@
-/* Put all your css in this or create a sapreate file for it.
-  make sure to use names that would not collide with others.
-*/
+@font-face {
+  font-family: Blox2;
+  src: url('../assets/fonts/Blox2.ttf');
+}
 
+@font-face {
+  font-family: VCR_OSD_MONO;
+  src: url('../assets/fonts/VCR_OSD_MONO.ttf');
+}
 
 /* events start */
 
@@ -152,7 +157,7 @@
 }
 
 .main-div2 {
-    width: 100%;
+    width: 200%;
     border: 0.5px solid white;
     border-left: none;
     display: flex;
@@ -292,6 +297,9 @@
   opacity: 0;
   transform: translateY(30px);
   transition: 0.5s;
+  min-width: 300px;
+  min-height: 300px;
+  align-content: center;
 }
 .speaker-card .info h1 {
   margin: 0px;
@@ -397,6 +405,61 @@
 
 }
 
+@media screen and (max-width: 992px) {
+  /* Allow sec2 height to grow if needed on small screens */
+  .sec2 {
+    height: auto;
+    padding-top: 20px;
+  }
+
+  /* Stack the .main-sec2 items vertically */
+  .main-sec2 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* Remove borders or simplify layout */
+  .main-div1, .main-div2 {
+    width: 100%;
+    border: none;
+    padding: 15px;
+  }
+
+  /* Adjust the header font size for mobile */
+  .main-div1 h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  /* Make boxes full width on small screens */
+  .box-spek {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* spacing between cards */
+  }
+
+  /* Adjust images sizes or hide them if they cause layout issues */
+  /* .sec2 .img1,
+  .sec2 .img2,
+  .sec2 .img3,
+  .sec2 .img4 {
+    display: none;
+  } */
+}
+
+/* 
+   Example: Even smaller screen adjustments (e.g., max-width: 576px).
+*/
+@media screen and (max-width: 576px) {
+  .main-div1 p {
+    font-size: 0.9rem;
+  }
+
+  .speaker-card .info p {
+    font-size: 0.8rem;
+  }
+}
+
 .sec3 {
     height: 100vh;
     background-color: black;
@@ -407,9 +470,9 @@
 }
 
 @media screen and (min-width:0px) and (max-width:768px) {
-    .sec2 img{
+    /* .sec2 img{
         display: none;
-    }
+    } */
 
     .main-div1 h1{
         font-size: 38px;
@@ -427,7 +490,7 @@
     }
 
     .box-spek{
-        padding: 100px;
+        /* padding: 100px; */
         margin-top: -20px;
     }
 }
